@@ -36,7 +36,7 @@ class magece::db(
 
   database { 'magento':
     ensure   => present,
-    charset  => 'utf-8',
+    charset  => 'utf8',
     provider => 'mysql',
     require  => Class['mysql::server'],
   }
