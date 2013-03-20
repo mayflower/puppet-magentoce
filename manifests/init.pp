@@ -46,6 +46,10 @@ class magece(
 
   include magece::base
 
+  Package {
+    require => Exec['apt-get_update'],
+  }
+
   # mysql / db
   class { 'magece::db':
     username      => $db_user,
